@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 // import App from './App.jsx'
 import Logo from './react-components/Logo.jsx'
-import SectionsButtons from './react-components/SectionsButtons.jsx'
+import Form from './react-components/Form.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Logo />
-    <SectionsButtons />
-  </StrictMode>,
+    <Form />
+  </StrictMode>
 )
