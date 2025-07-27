@@ -10,57 +10,58 @@ import Education from './Education.jsx';
 import Experiences from './Experiences.jsx';
 import Skills from './Skills.jsx';
 
-function FormSection({ section }) {
-    let form;
+export default function Form() {
+    const SECTIONS = ["personal-info", "education", "experiences", "skills"];
+    const [activeSection, setActiveSection] = useState(SECTIONS[0]);
 
-    switch (section) {
-        case "personal-info":
-            form = <PersonalInfo />;
-            break;
-        case "education":
-            form = <Education />;
-            break;
-        case "experiences":
-            form = <Experiences />;
-            break;
-        case "skills":
-            form = <Skills />;
-            break;
-        default:
-            form = <p>Error!</p>;
+    // The section's display changes to "block", showing the section everytime the user click the corresponding section button.
+    // Other sessions' display stay "none" (hidden).
+    let personalInfoDisplay = "none";
+    let educationDisplay = "none";
+    let experiencesDisplay = "none";
+    let skillsDisplay = "none";
+
+    if (activeSection === "personal-info") {
+        personalInfoDisplay = "block";
+    } else if (activeSection === "education") {
+        educationDisplay = "block";
+    } else if (activeSection === "experiences") {
+        experiencesDisplay = "block";
+    } else if (activeSection === "skills") {
+        skillsDisplay = "block";
     }
 
     return (
         <div>
-            {form}
-        </div>
-    )
-}
-
-export default function Form() {
-    const SECTIONS = ["personal-info", "education", "experiences", "skills"];
-
-    const [form, changeForm] = useState(SECTIONS[0]);
-
-    return (
-        <div>
             <div id="sections-buttons">
-                <button className="button" onClick={() => {changeForm(SECTIONS[0])}}>
-                    <img className="icon" src={userIcon}></img>
+                <button className="button" onClick={() => setActiveSection(SECTIONS[0])}>
+                    <img className="icon" src={userIcon} alt="Personal Info" />
                 </button>
-                <button className="button" onClick={() => {changeForm(SECTIONS[1])}}>
-                    <img className="icon" src={educationIcon}></img>
+                <button className="button" onClick={() => setActiveSection(SECTIONS[1])}>
+                    <img className="icon" src={educationIcon} alt="Education" />
                 </button>
-                <button className="button" onClick={() => {changeForm(SECTIONS[2])}}>
-                    <img className="icon" src={experiencesIcon}></img>
+                <button className="button" onClick={() => setActiveSection(SECTIONS[2])}>
+                    <img className="icon" src={experiencesIcon} alt="Experiences" />
                 </button>
-                <button className="button" onClick={() => {changeForm(SECTIONS[3])}}>
-                    <img className="icon" src={skillsIcon}></img>
+                <button className="button" onClick={() => setActiveSection(SECTIONS[3])}>
+                    <img className="icon" src={skillsIcon} alt="Skills" />
                 </button>
             </div>
+
             <div id="form">
-                <FormSection section={form} />
+                <div style={{ display: personalInfoDisplay }}>
+                    <PersonalInfo />
+                </div>
+                <div style={{ display: educationDisplay }}>
+                    <Education />
+                </div>
+                <div style={{ display: experiencesDisplay }}>
+                    <Experiences />
+                </div>
+                <div style={{ display: skillsDisplay }}>
+                    <Skills />
+                </div>
             </div>
         </div>
-    )
+    );
 }

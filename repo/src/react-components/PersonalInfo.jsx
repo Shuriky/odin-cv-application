@@ -17,8 +17,12 @@ export default function PersonalInfo() {
                 <input id="contact-number"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email</label>    
                 <input id="email"></input>
+            </div>
+            <div className="text-input">
+                <label htmlFor="external-links">External Links</label>
+                <input id="external-links"></input>
             </div>
         </div>
     )

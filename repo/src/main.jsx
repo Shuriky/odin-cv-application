@@ -7,7 +7,9 @@ import Form from './react-components/Form.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Logo />
-    <Form />
+    <div class="form-section">
+      <Logo />
+      <Form />
+    </div>
   </StrictMode>
 )
