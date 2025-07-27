@@ -5,20 +5,20 @@ function EducationComponent({ index }) {
         <div class="form-box">
             <label htmlFor="form-box">Education #{index}</label>
             <div className="text-input">
-                <label htmlFor="name">School Name</label>
-                <input id="name"></input>
+                <label htmlFor="school-name">School Name</label>
+                <input id="school-name"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="address">Degree</label>
-                <input id="address"></input>
+                <label htmlFor="degree">Degree</label>
+                <input id="degree"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="contact-number">Start/End Date</label>
-                <input id="contact-number"></input>
+                <label htmlFor="date">Start/End Date</label>
+                <input id="date"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="email">Location</label>    
-                <input id="email"></input>
+                <label htmlFor="location">Location</label>    
+                <input id="location"></input>
             </div>
         </div>
     )
