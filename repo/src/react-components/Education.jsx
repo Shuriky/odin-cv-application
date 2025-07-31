@@ -5,8 +5,8 @@ function EducationComponent({ index }) {
         <div class="form-box">
             <label htmlFor="form-box">Education #{index}</label>
             <div className="text-input">
-                <label htmlFor="school-name">School Name</label>
-                <input id="school-name"></input>
+                <label htmlFor="schoolName">School Name</label>
+                <input id="schoolName"></input>
             </div>
             <div className="text-input">
                 <label htmlFor="degree">Degree</label>

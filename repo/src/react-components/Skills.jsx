@@ -24,8 +24,8 @@ export default function Skills() {
         
         <div className="form" id="personal-info">
             <div>{skills}</div>
-            <button class="add-section-button" id="add-skills" onClick={handleClick}>
-                <label htmlFor="add-skills">Add Skill</label>
+            <button class="add-section-button" id="addSkills" onClick={handleClick}>
+                <label htmlFor="addSkills">Add Skill</label>
             </button>
         </div>
     )

@@ -13,16 +13,16 @@ export default function PersonalInfo() {
                 <input id="address"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="contact-number">Contact Number</label>
-                <input id="contact-number"></input>
+                <label htmlFor="contactNumber">Contact Number</label>
+                <input id="contactNumber"></input>
             </div>
             <div className="text-input">
                 <label htmlFor="email">Email</label>    
                 <input id="email"></input>
             </div>
             <div className="text-input">
-                <label htmlFor="external-links">External Links</label>
-                <input id="external-links"></input>
+                <label htmlFor="externalLinks">External Links</label>
+                <input id="externalLinks"></input>
             </div>
         </div>
     )

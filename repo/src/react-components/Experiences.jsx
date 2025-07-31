@@ -5,8 +5,8 @@ function ExperiencesComponent({ index }) {
         <div class="form-box">
             <label htmlFor="form-box">Experience #{index}</label>
             <div className="text-input">
-                <label htmlFor="work-name">Work Name</label>
-                <input id="work-name"></input>
+                <label htmlFor="workName">Work Name</label>
+                <input id="workName"></input>
             </div>
             <div className="text-input">
                 <label htmlFor="position">Position</label>
