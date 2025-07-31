@@ -16,6 +16,15 @@ function EducationComponent({ index, formData, setFormData }) {
         }));
     };
 
+    // Handle Delete Education
+    const handleDelete = (index) => {
+        setFormData((prev) => ({
+            ...prev,
+            education: prev.education.filter((_, i) => i !== index), // Remove education at index
+        }));
+    };
+
+
     // Ensure formData.education[index] exists to avoid undefined errors
     const education = formData.education[index] || { schoolName: "", degree: "", date: "", location: "" };
 
@@ -54,6 +63,9 @@ function EducationComponent({ index, formData, setFormData }) {
                     onChange={(e) => handleChange(e, index)} // Call handleChange here
                 />
             </div>
+            <div onClick={() => handleDelete(index)} className="deleteButton">
+                Delete
+            </div>
         </div>
     );
 }
@@ -64,7 +76,7 @@ export default function Education({ formData, setFormData }) {
             ...formData,
             education: [
                 ...formData.education,
-                { schoolName: "Truong Doi", degree: "Bachelor of Nem Chua", date: "Marchuary", location: "nowhere" }, // Add an empty form for a new education entry
+                { schoolName: "[School Name]", degree: "[Degree]", date: "[M yyyy - M yyyy]", location: "[Address]" }, // Add new entry
             ],
         });
     };

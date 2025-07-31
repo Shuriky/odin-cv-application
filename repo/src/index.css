@@ -201,7 +201,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  margin-bottom: 1vw;
 }
 
 .smallComponent {
@@ -232,4 +232,10 @@ h2 {
   margin-left: 0.1vw;
   margin-right: 0.1vw;
   margin-bottom: 1vw;
+}
+
+.deleteButton {
+  color: red;
+  cursor: pointer;
+  text-align: end;
 }
