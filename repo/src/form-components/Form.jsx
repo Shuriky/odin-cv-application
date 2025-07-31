@@ -10,12 +10,10 @@ import Education from './Education.jsx';
 import Experiences from './Experiences.jsx';
 import Skills from './Skills.jsx';
 
-export default function Form() {
+export default function Form({ formData, setFormData }) {
     const SECTIONS = ["personal-info", "education", "experiences", "skills"];
     const [activeSection, setActiveSection] = useState(SECTIONS[0]);
 
-    // The section's display changes to "block", showing the section everytime the user click the corresponding section button.
-    // Other sessions' display stay "none" (hidden).
     let personalInfoDisplay = "none";
     let educationDisplay = "none";
     let experiencesDisplay = "none";
@@ -50,7 +48,10 @@ export default function Form() {
 
             <div id="form">
                 <div style={{ display: personalInfoDisplay }}>
-                    <PersonalInfo />
+                    <PersonalInfo
+                        formData={formData}
+                        setFormData={setFormData}
+                    />
                 </div>
                 <div style={{ display: educationDisplay }}>
                     <Education />

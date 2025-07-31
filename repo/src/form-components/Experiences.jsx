@@ -36,7 +36,7 @@ export default function Experiences() {
         
         <div className="form" id="personal-info">
             <div>{experiences}</div>
-            <button class="add-section-button" id="add-Experiences" onClick={handleClick}>
+            <button className="add-section-button" id="add-Experiences" onClick={handleClick}>
                 <label htmlFor="add-Experiences">Add Experience</label>
             </button>
         </div>

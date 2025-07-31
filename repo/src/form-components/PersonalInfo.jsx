@@ -1,29 +1,57 @@
-
-export default function PersonalInfo() {
+export default function PersonalInfo({ formData, setFormData }) {
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            personal: {
+                ...prev.personal,
+                [id]: value,
+            },
+        }));
+    };
 
     return (
-        
         <div className="form" id="personal-info">
             <div className="text-input">
                 <label htmlFor="name">Full Name</label>
-                <input id="name"></input>
+                <input
+                    id="name"
+                    value={formData.personal.name}
+                    onChange={handleChange}
+                />
             </div>
             <div className="text-input">
                 <label htmlFor="address">Address</label>
-                <input id="address"></input>
+                <input
+                    id="address"
+                    value={formData.personal.address}
+                    onChange={handleChange}
+                />
             </div>
             <div className="text-input">
                 <label htmlFor="contactNumber">Contact Number</label>
-                <input id="contactNumber"></input>
+                <input
+                    id="contactNumber"
+                    value={formData.personal.contactNumber}
+                    onChange={handleChange}
+                />
             </div>
             <div className="text-input">
-                <label htmlFor="email">Email</label>    
-                <input id="email"></input>
+                <label htmlFor="email">Email</label>
+                <input
+                    id="email"
+                    value={formData.personal.email}
+                    onChange={handleChange}
+                />
             </div>
             <div className="text-input">
                 <label htmlFor="externalLinks">External Links</label>
-                <input id="externalLinks"></input>
+                <input
+                    id="externalLinks"
+                    value={formData.personal.externalLinks}
+                    onChange={handleChange}
+                />
             </div>
         </div>
-    )
+    );
 }

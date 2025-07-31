@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   width: 100%;
+  letter-spacing: 0.05vw;
 }
 
 #app {
@@ -36,11 +37,6 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -69,14 +65,12 @@ button:active {
 #logo {
   padding-top: 2vw;
   padding-bottom: 2vw;
-  margin-top: -3vw;
   width: 36vw;
 }
 
-p {
-  font-size: 3vw;
-  margin-bottom: -2vw;
+#logo-leter {
   text-align: center;
+  font-size: 2.5vw;
 }
 
 /* Buttons */
@@ -164,4 +158,32 @@ label {
   width: 41.35vw;
   height: 58.45vw;
   background-color: white;
+}
+
+#personalInfoDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2.5vw;
+  margin: 0.2vw;
+  padding: 0.2vw;
+  margin-top: 1vw;
+}
+
+p {
+  font-weight: 200;
+  margin: 0.1vw;
+  padding: 0.1vw;
+  font-size: 1vw;
+}
+
+#contactInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

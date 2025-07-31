@@ -36,7 +36,7 @@ export default function Education() {
         
         <div className="form" id="personal-info">
             <div>{educations}</div>
-            <button class="add-section-button" id="add-education" onClick={handleClick}>
+            <button className="add-section-button" id="add-education" onClick={handleClick}>
                 <label htmlFor="add-education">Add Education</label>
             </button>
         </div>
