@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: black;
-  background-color: white;
+  background-color: ghostwhite;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,9 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
 
+  width: 100%;
 }
 
 a {
@@ -62,7 +63,6 @@ button:active {
 .form-section {
   display: flex;
   flex-direction: column;
-  padding-left: 5vw;
 }
 
 /* Logo */
@@ -143,4 +143,24 @@ label {
   
 }
 
-/* Personal Info */
+#separate-line {
+  background-color: black;
+  width: 0.15vw;
+  height: 95%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 2vw;
+}
+
+/* Document */
+#document-container {
+  width: 100%;
+  margin: 3vw;
+}
+
+#document {
+  /* A4 paper size */
+  width: 41.35vw;
+  height: 58.45vw;
+  background-color: white;
+}
