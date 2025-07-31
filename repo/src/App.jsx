@@ -6,12 +6,15 @@ import React, { useState } from "react";
 export default function App() {
     const [formData, setFormData] = useState({
         personal: {
-            name: "",
-            address: "",
-            contactNumber: "",
-            email: "",
-            externalLinks: "",
+            name: "John Doe",
+            address: "Thanh Hoa 36",
+            contactNumber: "0123456789",
+            email: "hello@gmail.com",
+            externalLinks: "linkedin",
         },
+        education: [
+            { schoolName: "Truong Doi", degree: "Bachelor of Nem Chua", date: "Marchuary", location: "nowhere" }, // Initial empty education object
+        ],
     });
 
     return (

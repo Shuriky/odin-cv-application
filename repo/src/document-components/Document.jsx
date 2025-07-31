@@ -2,7 +2,6 @@ function PersonalInfoDisplay({ formData, setFormData }) {
     let contactDisplay = formData.personal.contactNumber ? "block" : "none";
     let emailDisplay = formData.personal.email ? "block" : "none";
     let linkDisplay = formData.personal.externalLinks ? "block" : "none";
-    console.log(linkDisplay);
     return (
         <div id="personalInfoDisplay">
             <h1>{formData.personal.name.toUpperCase()}</h1>
@@ -13,13 +12,41 @@ function PersonalInfoDisplay({ formData, setFormData }) {
                 <p style={{ display: linkDisplay }}>{formData.personal.externalLinks}</p>
             </div>
         </div>
-    )
+    );
+}
+
+function EducationDisplay({ formData, setFormData }) {
+    return (
+        <div class="sectionDisplay" id="educationDisplay">
+            <h2>Education</h2>
+            <div class="horizontalLine"></div>
+            {formData.education.length === 0 ? (
+                <p>No education data available.</p>
+            ) : (
+                formData.education.map((educationData, index) => (
+                    <div key={index} className="componentDisplay">
+                        <div className="smallComponent">
+                            <p><strong>{educationData.schoolName}</strong></p>
+                            <p><em>{educationData.degree}</em></p>
+                        </div>
+                        <div className="smallComponent" style={{ textAlign: "end" }}>
+                            <p><strong>{educationData.date}</strong></p>
+                            <p><em>{educationData.location}</em></p>
+                        </div>
+                    </div>
+                ))
+            )}
+        </div>
+    );
 }
 
 export default function Document({ formData, setFormData }) {
     return (
-        <div id="document">
-            <PersonalInfoDisplay formData={formData} setFormData={setFormData}/>
+        <div id="documentContainer">
+            <div id="document">
+                <PersonalInfoDisplay formData={formData} setFormData={setFormData}/>
+                <EducationDisplay formData={formData} setFormData={setFormData} />
+            </div>
         </div>
     );
 }

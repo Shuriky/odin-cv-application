@@ -153,11 +153,15 @@ label {
   margin: 3vw;
 }
 
-#document {
+#documentContainer {
   /* A4 paper size */
   width: 41.35vw;
   height: 58.45vw;
   background-color: white;
+}
+
+#document {
+  margin: 2vw;
 }
 
 #personalInfoDisplay {
@@ -186,4 +190,46 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.sectionDisplay {
+  display: flex;
+  flex-direction: column;
+}
+
+.componentDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.smallComponent {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+strong {
+  font-weight: 800;
+}
+
+em {
+  font-size: 0.8vw;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 1vw;
+  margin: 0.1vw;
+  padding: 0.1vw;
+  margin-top: 1vw;
+}
+
+.horizontalLine {
+  background-color: black;
+  height: 0.1vw;
+  margin-left: 0.1vw;
+  margin-right: 0.1vw;
+  margin-bottom: 1vw;
 }

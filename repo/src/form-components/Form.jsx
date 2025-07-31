@@ -13,7 +13,7 @@ import Skills from './Skills.jsx';
 export default function Form({ formData, setFormData }) {
     const SECTIONS = ["personal-info", "education", "experiences", "skills"];
     const [activeSection, setActiveSection] = useState(SECTIONS[0]);
-
+    console.log(formData);
     let personalInfoDisplay = "none";
     let educationDisplay = "none";
     let experiencesDisplay = "none";
@@ -54,7 +54,10 @@ export default function Form({ formData, setFormData }) {
                     />
                 </div>
                 <div style={{ display: educationDisplay }}>
-                    <Education />
+                    <Education 
+                        formData={formData}
+                        setFormData={setFormData}
+                    />
                 </div>
                 <div style={{ display: experiencesDisplay }}>
                     <Experiences />
