@@ -1,6 +1,6 @@
-import Logo from './react-components/Logo.jsx'
-import Form from './react-components/Form.jsx'
-
+import Logo from './form-components/Logo.jsx'
+import Form from './form-components/Form.jsx'
+import Document from './document-components/Document.jsx';
 export default function App() {
 
     return (
@@ -11,8 +11,7 @@ export default function App() {
             </div>
             <div id="separate-line"></div>
             <div id="document-container">
-                <div id="document">
-                </div>
+                <Document />
             </div>
         </div>
     );
