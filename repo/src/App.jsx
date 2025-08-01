@@ -12,9 +12,19 @@ export default function App() {
             email: "abc@gmail.com",
             externalLinks: "linkedin/github/others",
         },
-        education: [
-            { schoolName: "[School Name]", degree: "[Degree]", date: "[M yyyy - M yyyy]", location: "[Address]" },
-        ],
+        education: [{
+            schoolName: "[School Name]", 
+            degree: "[Degree]", 
+            date: "[M yyyy - M yyyy]", 
+            location: "[Address]" 
+            },],
+        experiences: [{
+            workName: "[Work Name]",
+            position: "[Position]",
+            date: "[M yyyy - M yyyy]",
+            location: "[Address]",
+            descriptions: "[Responsibilities, achievements, etc.]",
+            },],
     });
 
     return (

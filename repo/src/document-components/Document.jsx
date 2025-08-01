@@ -41,12 +41,41 @@ function EducationDisplay({ formData, setFormData }) {
     );
 }
 
+function ExperiencesDisplay({ formData }) {
+    const experienceDisplay = formData.experiences.length ? "block" : "none";
+
+    return (
+        <div className="sectionDisplay" id="experiencesDisplay" style={{ display: experienceDisplay }}>
+            <h2>Experience</h2>
+            <div className="horizontalLine"></div>
+            {formData.experiences.length === 0 ? (
+                <p>No experience data available.</p>
+            ) : (
+                formData.experiences.map((experienceData, index) => (
+                    <div key={index} className="componentDisplay">
+                        <div className="smallComponent">
+                            <p><strong>{experienceData.workName}</strong></p>
+                            <p><em>{experienceData.position}</em></p>
+                            <p>{experienceData.descriptions}</p>
+                        </div>
+                        <div className="smallComponent" style={{ textAlign: "end" }}>
+                            <p><strong>{experienceData.date}</strong></p>
+                            <p><em>{experienceData.location}</em></p>
+                        </div>
+                    </div>
+                ))
+            )}
+        </div>
+    );
+}
+
 export default function Document({ formData, setFormData }) {
     return (
         <div id="documentContainer">
             <div id="document">
                 <PersonalInfoDisplay formData={formData} setFormData={setFormData}/>
                 <EducationDisplay formData={formData} setFormData={setFormData} />
+                <ExperiencesDisplay formData={formData} setFormData={setFormData} />
             </div>
         </div>
     );

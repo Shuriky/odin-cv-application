@@ -239,3 +239,8 @@ h2 {
   cursor: pointer;
   text-align: end;
 }
+
+.descriptionInput {
+  display: flex;
+  text-wrap: wrap;
+}
