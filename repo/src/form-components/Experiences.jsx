@@ -16,6 +16,41 @@ function ExperienceComponent({ index, formData, setFormData }) {
         }));
     };
 
+    const handleBulletInput = (e, index) => {
+        if (e.key === "Enter") {
+            e.preventDefault(); // Prevent default newline
+
+            const textarea = e.target;
+            const { selectionStart, selectionEnd, value } = textarea;
+            const bullet = "\n";
+
+            const newValue =
+                value.substring(0, selectionStart) +
+                bullet +
+                value.substring(selectionEnd);
+
+            // Update state first
+            setFormData((prev) => ({
+                ...prev,
+                experiences: prev.experiences.map((exp, i) =>
+                    i === index
+                        ? { ...exp, descriptions: newValue }
+                        : exp
+                ),
+            }));
+
+            // Wait for DOM update, then adjust height
+            requestAnimationFrame(() => {
+                textarea.value = newValue; // ensure it has the new text
+                autoResize(textarea);
+
+                // Restore cursor position after the bullet
+                const newCursorPos = selectionStart + bullet.length;
+                textarea.setSelectionRange(newCursorPos, newCursorPos);
+            });
+        }
+    };
+
     const handleDelete = (index) => {
         setFormData((prev) => ({
             ...prev,
@@ -68,13 +103,19 @@ function ExperienceComponent({ index, formData, setFormData }) {
             </div>
             <div className="text-input">
                 <label htmlFor="descriptions">Descriptions</label>
-                <input
-                    class="descriptionInput"
+                <textarea
+                    className="descriptionInput"
                     id={`descriptions-${index}`}
                     value={experience.descriptions}
                     onChange={(e) => {
                         handleChange(e, index);
+                        autoResize(e.target);
                     }}
+                    onKeyDown={(e) => {
+                        handleBulletInput(e, index);
+                    }}
+                    rows={1}
+                    style={{ overflow: "hidden", resize: "none" }}
                 />
             </div>
             <div onClick={() => handleDelete(index)} className="deleteButton">
@@ -83,6 +124,12 @@ function ExperienceComponent({ index, formData, setFormData }) {
         </div>
     );
 }
+
+function autoResize(textarea) {
+    textarea.style.height = "auto"; // Reset height
+    textarea.style.height = `${textarea.scrollHeight}px`; // Set to scroll height
+}
+
 
 
 export default function Experiences({ formData, setFormData }) {
@@ -96,7 +143,7 @@ export default function Experiences({ formData, setFormData }) {
                     position: "[Position]",
                     date: "[M yyyy - M yyyy]",
                     location: "[Address]",
-                    descriptions: "[Responsibilities, achievements, etc.]",
+                    descriptions: "[Description]",
                 },
             ],
         });

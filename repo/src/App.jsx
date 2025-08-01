@@ -23,7 +23,7 @@ export default function App() {
             position: "[Position]",
             date: "[M yyyy - M yyyy]",
             location: "[Address]",
-            descriptions: "[Responsibilities, achievements, etc.]",
+            descriptions: "[Description]",
             },],
     });
 

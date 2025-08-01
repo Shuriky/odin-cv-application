@@ -107,7 +107,7 @@ button:active {
   margin-bottom: 2vw;
 }
 
-input {
+input, textarea {
   height: 2vw;
   background-color: transparent;
   color: black;
@@ -141,10 +141,11 @@ label {
 #separate-line {
   background-color: black;
   width: 0.15vw;
-  height: 60vw;
+  height: 65vw;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-top: 2vw;
+  margin-bottom: 5vw;
 }
 
 /* Document */
@@ -241,6 +242,15 @@ h2 {
 }
 
 .descriptionInput {
+  resize: none;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.descriptionDisplay {
+  margin-top: -0.5vw;
   display: flex;
-  text-wrap: wrap;
+  flex-direction: column;
 }
