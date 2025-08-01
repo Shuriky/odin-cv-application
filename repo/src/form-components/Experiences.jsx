@@ -129,8 +129,6 @@ function autoResize(textarea) {
     textarea.style.height = `${textarea.scrollHeight}px`; // Set to scroll height
 }
 
-
-
 export default function Experiences({ formData, setFormData }) {
     const handleClick = () => {
         setFormData({
