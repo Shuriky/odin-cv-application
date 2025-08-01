@@ -159,6 +159,8 @@ label {
   width: 41.35vw;
   height: 58.45vw;
   background-color: white;
+  position: sticky;
+  top: 2vw;
 }
 
 #document {
