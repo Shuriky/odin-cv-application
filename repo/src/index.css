@@ -272,7 +272,7 @@ h2 {
   flex-direction: column;
 }
 
-/* Save as PDF button */
+/* Export Document */
 #printButton {
   width: 12vw;
   height: 3vw;
