@@ -183,12 +183,21 @@ h1 {
   margin-bottom: -0.2vw;
 }
 
-p {
+p, li {
   font-weight: 200;
   margin: 0.1vw;
   padding: 0.1vw;
   margin-top: -0.2vw;
   font-size: 1vw;
+  word-break: break-word;   
+  overflow-wrap: break-word;  
+  white-space: normal;   
+  max-width: 100%;            
+}
+
+li {
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
 }
 
 #contactInfo {

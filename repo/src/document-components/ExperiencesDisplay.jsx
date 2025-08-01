@@ -20,14 +20,16 @@ export default function ExperiencesDisplay({ formData }) {
                                 <p><em>{experienceData.location}</em></p>
                             </div>
                         </div>
-                        <ul className="descriptionDisplay">
-                            {experienceData.descriptions
-                                .split('\n')
-                                .filter(line => line.trim() !== '')
-                                .map((line, i) => (
-                                    <li key={i}>{line.replace(/^•\s*/, '')}</li>
-                                ))}
-                        </ul>
+                        <div>
+                            <ul className="descriptionDisplay">
+                                {experienceData.descriptions
+                                    .split('\n')
+                                    .filter(line => line.trim() !== '')
+                                    .map((line, i) => (
+                                        <li key={i}>{line.replace(/^•\s*/, '')}</li>
+                                    ))}
+                            </ul>
+                        </div>
                     </div>
                 ))
             )}
