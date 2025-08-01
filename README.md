@@ -8,4 +8,6 @@ User can create their own resume, add/remove contents as they wish.
 
 Then there are many options to export the document, such as saving as PDF or printing.
 
+Access the webpage: https://shuriky-resumemaker.vercel.app/
+
 Currently only support Window OS.
