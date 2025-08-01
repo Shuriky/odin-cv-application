@@ -40,7 +40,7 @@ body {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 1vw;
   border: 0.15vw solid;
   border-color: black;
   font-size: 1em;
@@ -86,6 +86,11 @@ button:active {
   padding: 0.75vw;
   margin: 0.75vw;
   background-color: white;
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
@@ -111,7 +116,7 @@ input, textarea {
   height: 2vw;
   background-color: transparent;
   color: black;
-  border-radius: 4px;
+  border-radius: 0.5vw;
   border: 0.15vw solid;
   border-color: black;
   font-family: "PT Serif", serif;
@@ -128,11 +133,14 @@ label {
 
 .add-section-button {
   height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-box {
   background-color: lightgrey;
-  border-radius: 4px;
+  border-radius: 0.5vw;
   border: 0.15vw solid;
   padding: 1vw; 
   margin-bottom: 2vw;
@@ -142,7 +150,7 @@ label {
 #separate-line {
   background-color: black;
   width: 0.15vw;
-  height: 65vw;
+  height: 75vw;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-top: 2vw;
@@ -254,6 +262,7 @@ h2 {
   color: red;
   cursor: pointer;
   text-align: end;
+  font-size: 1vw;
 }
 
 .descriptionInput {
@@ -280,7 +289,7 @@ h2 {
   font-size: 1.2vw;
   font-weight: 800;
   font-family: 'Courier New', Courier, monospace;
-  border-radius: 6px;
+  border-radius: 0.5vw;
   border: none;
 }
 
