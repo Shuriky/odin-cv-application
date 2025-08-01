@@ -163,8 +163,6 @@ label {
   width: 41.35vw;
   height: 58.45vw;
   background-color: white;
-  position: sticky;
-  top: 2vw;
 }
 
 #document {
@@ -286,7 +284,12 @@ h2 {
   border: none;
 }
 
-/* ===================== PRINT OVERRIDES ===================== */
+.print-content {
+  position: sticky;
+  top: 2vw;
+}
+
+/* Print Overide riles */
 @media print {
   /* General Reset */
   * {
@@ -336,14 +339,14 @@ h2 {
   #document {
     width: 100% !important;
     height: 100% !important;
-    padding-left: 0.5in !important;  /* inner page padding (acts as margin) */
+    padding-left: 0.5in !important;  
     padding-right: 0.5in !important;
     box-sizing: border-box !important;
     font-size: 12pt !important;
     margin: 0 !important;
   }
 
-  /* Font sizing for header/body */
+  /* Font resizing */
   h1 {
     font-size: 37.5pt !important;
     margin: 3pt !important; 
