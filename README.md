@@ -10,4 +10,4 @@ Then there are many options to export the document, such as saving as PDF or pri
 
 Access the webpage: https://cv-maker-shurikys-projects.vercel.app/
 
-Currently only support Window OS.
+Currently only support Google Chrome and Microsoft Edge on Window. If you access the site on other device, it may not function properly.
