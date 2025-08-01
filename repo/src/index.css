@@ -199,8 +199,8 @@ p, li {
 }
 
 li {
-  margin-top: -0.5vw;
-  margin-bottom: -0.5vw;
+  font-size: 0.8vw;
+  margin-top: -0.3vw;
 }
 
 #contactInfo {
@@ -285,3 +285,121 @@ h2 {
   border-radius: 6px;
   border: none;
 }
+
+/* ===================== PRINT OVERRIDES ===================== */
+@media print {
+  /* General Reset */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 794px !important;   /* A4 width at 96 DPI */
+    height: 1123px !important; /* A4 height at 96 DPI */
+    overflow: hidden !important;
+    background-color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide UI-only elements */
+  #printButton,
+  .form-section,
+  #separate-line {
+    display: none !important;
+  }
+
+  /* Main container */
+  #app {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #document-container,
+  #documentContainer {
+    width: 794px !important;
+    height: 1123px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background-color: white !important;
+    position: static !important;
+    border: none !important;
+  }
+
+  /* The resume content itself */
+  #document {
+    width: 100% !important;
+    height: 100% !important;
+    padding-left: 0.5in !important;  /* inner page padding (acts as margin) */
+    padding-right: 0.5in !important;
+    box-sizing: border-box !important;
+    font-size: 12pt !important;
+    margin: 0 !important;
+  }
+
+  /* Font sizing for header/body */
+  h1 {
+    font-size: 37.5pt !important;
+    margin: 3pt !important; 
+    padding: 3pt !important;
+    margin-bottom: -3pt !important;
+  }
+
+  h2 {
+    font-size: 15pt !important;
+    margin: 1.5pt !important; 
+    padding: 1.5pt !important;
+    margin-top: 3pt !important;
+    margin-bottom: -10pt !important;
+  }
+
+  p, li {
+    font-size: 15pt !important;
+    margin: 1.5pt !important;
+    padding: 1.5pt !important;
+    line-height: 1.5 !important;
+  }
+
+  li {
+    font-size: 12pt !important;
+    margin-top: -4.5pt !important;
+  }
+
+  em {
+    font-size: 12pt !important;
+  }
+
+  /* Remove borders & background from input fields */
+  input, textarea {
+    border: none !important;
+    background: transparent !important;
+    color: black !important;
+  }
+
+  .form-box {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .horizontalLine {
+    height: 1px !important;
+    background-color: black !important;
+    margin: 1em 0 !important;
+  }
+}
+
+/* Page setup for perfect scaling */
+@page {
+  size: 794px 1123px;
+  margin: 0;
+}
+
+
+
