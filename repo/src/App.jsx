@@ -25,6 +25,7 @@ export default function App() {
             </div>
             <div id="separate-line"></div>
             <div id="document-container">
+                <button id="printButton">Save as PDF</button>
                 <Document formData={formData} setFormData={setFormData}/>
             </div>
         </div>
