@@ -30,7 +30,6 @@ function EducationComponent({ index, formData, setFormData }) {
 
     return (
         <div className="form-box">
-            <label htmlFor="form-box">Education #{index + 1}</label>
             <div className="text-input">
                 <label htmlFor="schoolName">School Name</label>
                 <input

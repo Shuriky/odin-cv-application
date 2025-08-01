@@ -3,7 +3,6 @@ import { useState } from "react";
 function SkillsComponent({ index }) {
     return (
         <div class="form-box">
-            <label htmlFor="form-box">Skill #{index}</label>
             <div className="text-input">
                 <label htmlFor="skill-name">Skill Name</label>
                 <input id="skill-name"></input>

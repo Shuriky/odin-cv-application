@@ -68,7 +68,6 @@ function ExperienceComponent({ index, formData, setFormData }) {
 
     return (
         <div className="form-box">
-            <label htmlFor="form-box">Experience #{index + 1}</label>
             <div className="text-input">
                 <label htmlFor="workName">Work Name</label>
                 <input
