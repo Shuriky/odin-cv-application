@@ -2,9 +2,9 @@ export default function EducationDisplay({ formData }) {
     let educationDisplay = formData.education.length ? "block" : "none";
 
     return (
-        <div class="sectionDisplay" id="educationDisplay" style={{ display: educationDisplay }}>
+        <div className="sectionDisplay" id="educationDisplay" style={{ display: educationDisplay }}>
             <h2>Education</h2>
-            <div class="horizontalLine"></div>
+            <div className="horizontalLine"></div>
             {formData.education.length === 0 ? (
                 <p>No education data available.</p>
             ) : (

@@ -66,7 +66,10 @@ export default function Form({ formData, setFormData }) {
                     />
                 </div>
                 <div style={{ display: skillsDisplay }}>
-                    <Skills />
+                    <Skills 
+                        formData={formData}
+                        setFormData={setFormData}
+                    />
                 </div>
             </div>
         </div>

@@ -75,7 +75,12 @@ export default function Education({ formData, setFormData }) {
             ...formData,
             education: [
                 ...formData.education,
-                { schoolName: "[School Name]", degree: "[Degree]", date: "[M yyyy - M yyyy]", location: "[Address]" }, // Add new entry
+                { 
+                    schoolName: "School Name", 
+                    degree: "Degree", 
+                    date: "M yyyy - M yyyy", 
+                    location: "Address" 
+                },
             ],
         });
     };

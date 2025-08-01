@@ -116,6 +116,7 @@ input, textarea {
   border-color: black;
   font-family: "PT Serif", serif;
   font-size: 1vw;
+  padding-left: 0.5vw;
 }
 
 label {
@@ -179,12 +180,14 @@ h1 {
   margin: 0.2vw;
   padding: 0.2vw;
   margin-top: 1vw;
+  margin-bottom: -0.2vw;
 }
 
 p {
   font-weight: 200;
   margin: 0.1vw;
   padding: 0.1vw;
+  margin-top: -0.2vw;
   font-size: 1vw;
 }
 

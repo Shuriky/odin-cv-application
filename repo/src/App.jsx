@@ -6,25 +6,15 @@ import React, { useState } from "react";
 export default function App() {
     const [formData, setFormData] = useState({
         personal: {
-            name: "[Your Name]",
-            address: "[Street, State, Postal code]",
-            contactNumber: "[Phone number]",
-            email: "abc@gmail.com",
+            name: "John Doe",
+            address: "Street, State, Postal code",
+            contactNumber: "0123456789",
+            email: "example@gmail.com",
             externalLinks: "linkedin/github/others",
         },
-        education: [{
-            schoolName: "[School Name]", 
-            degree: "[Degree]", 
-            date: "[M yyyy - M yyyy]", 
-            location: "[Address]" 
-            },],
-        experiences: [{
-            workName: "[Work Name]",
-            position: "[Position]",
-            date: "[M yyyy - M yyyy]",
-            location: "[Address]",
-            descriptions: "[Description]",
-            },],
+        education: [],
+        experiences: [],
+        skills: [],
     });
 
     return (

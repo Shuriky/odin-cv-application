@@ -138,11 +138,11 @@ export default function Experiences({ formData, setFormData }) {
             experiences: [
                 ...formData.experiences,
                 {
-                    workName: "[Work Name]",
-                    position: "[Position]",
-                    date: "[M yyyy - M yyyy]",
-                    location: "[Address]",
-                    descriptions: "[Description]",
+                    workName: "Work Name",
+                    position: "Position",
+                    date: "M yyyy - M yyyy",
+                    location: "Address",
+                    descriptions: "Description",
                 },
             ],
         });
