@@ -46,15 +46,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  cursor: pointer;
+  cursor: pointer;  
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: lightgrey;
+  background-color: rgb(200, 239, 200);
+  border: 0.15vw solid rgb(2, 79, 2);
 } 
-button:active {
-  background-color: grey;
-}
 
 .form-section {
   display: flex;
@@ -93,6 +91,11 @@ button:active {
   align-items: center;
 }
 
+.button.active {
+  border: 0.15vw solid rgb(2, 79, 2);
+  background-color: rgb(200, 239, 200);
+}
+
 .icon {
   width: 2vw;
   height: 2vw;
@@ -110,6 +113,11 @@ button:active {
   flex-direction: column;
   flex: 1;
   margin-bottom: 2vw;
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(2, 79, 2);
+  background-color: rgb(200, 239, 200);
 }
 
 input, textarea {
@@ -269,7 +277,6 @@ h2 {
   resize: none;
   overflow: hidden;
   font-family: inherit;
-  font-size: inherit;
   line-height: 1.4;
 }
 
@@ -286,11 +293,15 @@ h2 {
   margin-bottom: 2vw;
   background-color: lightgreen;
   color: white;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 800;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 0.5vw;
   border: none;
+}
+
+#printButton:hover {
+  border: 0.15vw solid rgb(2, 79, 2);
 }
 
 .print-content {

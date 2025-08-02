@@ -32,16 +32,35 @@ export default function Form({ formData, setFormData }) {
     return (
         <div>
             <div id="sections-buttons">
-                <button className="button" onClick={() => setActiveSection(SECTIONS[0])}>
+                <button
+                    className={`button ${activeSection === "personal-info" ? "active" : ""}`}
+                    title="Personal Info"
+                    onClick={() => setActiveSection(SECTIONS[0])}
+                >
                     <img className="icon" src={userIcon} alt="Personal Info" />
                 </button>
-                <button className="button" onClick={() => setActiveSection(SECTIONS[1])}>
+
+                <button
+                    className={`button ${activeSection === "education" ? "active" : ""}`}
+                    title="Education"
+                    onClick={() => setActiveSection(SECTIONS[1])}
+                >
                     <img className="icon" src={educationIcon} alt="Education" />
                 </button>
-                <button className="button" onClick={() => setActiveSection(SECTIONS[2])}>
+
+                <button
+                    className={`button ${activeSection === "experiences" ? "active" : ""}`}
+                    title="Experiences"
+                    onClick={() => setActiveSection(SECTIONS[2])}
+                >
                     <img className="icon" src={experiencesIcon} alt="Experiences" />
                 </button>
-                <button className="button" onClick={() => setActiveSection(SECTIONS[3])}>
+
+                <button
+                    className={`button ${activeSection === "skills" ? "active" : ""}`}
+                    title="Skills"
+                    onClick={() => setActiveSection(SECTIONS[3])}
+                >
                     <img className="icon" src={skillsIcon} alt="Skills" />
                 </button>
             </div>
