@@ -8,6 +8,5 @@ User can create their own resume, add/remove contents as they wish.
 
 Then there are many options to export the document, such as saving as PDF or printing.
 
-Access the webpage: https://cv-maker-shurikys-projects.vercel.app/
+Access the webpage: https://shuriky-resumemaker.vercel.app/
 
-Currently only support Google Chrome and Microsoft Edge on Window. If you access the site on other device, it may not function properly.
